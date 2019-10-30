@@ -1,0 +1,38 @@
+// Colors
+$red: #d66; // stylelint-disable-line
+$blue: #00a1dc;
+$grey: #ececec;
+$green: #02b710;
+$black: #343434;
+$orange: #f48b1e;
+$yellow: #ffffe5;
+$redHover: #af3535;
+$blueHover: #0187b8;
+$dark-grey: #a3a3a3;
+$dark-blue: #080808;
+$light-blue: #3aa2dd;
+$light-grey: #f7f7f7;
+$light-yellow: #fffff1;
+$bright-yellow: #ffeec7;
+
+// Elements style
+$border: 4px;
+$baseIdent: 16px;
+
+// Animation
+$baseTransition: 0.3s ease;
+$fastTransition: 0.2s ease;
+$fadeTransition: 0.4s cubic-bezier(0.16, 1.01, 0.2, 1.03);
+
+// Effects
+$boxShadowLittle: 0 8px 20px 0 rgba(0, 0, 0, 0.1);
+$boxShadowBig: 0 8px 17px rgba(0, 0, 0, 0.16), 0 2px 5px rgba(0, 0, 0, 0.18);
+
+// popup's backgrounds
+$modalOverlay: rgba(0, 76, 104, 0.5);
+$confirmOverlay: rgba(163, 163, 163, 0.5);
+
+// Media
+$mobileSize: 900px;
+$mobileWidth: 450px;
+$mobileSmallWidth: 400px;

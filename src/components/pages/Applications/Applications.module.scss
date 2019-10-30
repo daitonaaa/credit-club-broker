@@ -1,0 +1,13 @@
+@import '~vars', '~mixins';
+
+.head {
+  @include flexBox(space-between);
+
+  @media (max-width: $mobileWidth) {
+    flex-wrap: wrap;
+  }
+}
+
+.create {
+  width: initial;
+}

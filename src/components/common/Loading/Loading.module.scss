@@ -1,0 +1,75 @@
+@import '~mixins';
+
+.loading {
+  @include flexBox(center);
+
+  width: 100%;
+  min-height: 200px;
+}
+
+.max {
+  width: auto;
+  min-height: auto;
+
+  .ring {
+    @include flexBox(center);
+
+    width: 256px;
+    height: 256px;
+
+    div {
+      width: 128px;
+      height: 128px;
+    }
+  }
+}
+
+.min {
+  width: auto;
+  min-height: auto;
+
+  .ring {
+    @include flexBox(center);
+
+    width: 30px;
+    height: 30px;
+
+    div {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+
+.ring {
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+
+  div {
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    margin: 0;
+    width: 64px;
+    height: 64px;
+    border: 8px solid #3aa2dd;
+    border-radius: 50%;
+    border-color: #3aa2dd transparent transparent;
+    animation: lds-ring-default 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+
+    &:nth-child(1) { animation-delay: -0.45s; }
+    &:nth-child(2) { animation-delay: -0.3s; }
+    &:nth-child(3) { animation-delay: -0.15s; }
+  }
+}
+
+.white .ring div {
+  border-color: #fff transparent transparent;
+}
+
+@keyframes lds-ring-default {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

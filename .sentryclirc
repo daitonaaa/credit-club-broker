@@ -1,0 +1,6 @@
+[defaults]
+org=creditclub
+project=credit-club-broker
+
+[auth]
+token=6c6f18c980dc4089b7b614ff6a0ea876fd2956a24a4d4ad7998409ec8a16ee37

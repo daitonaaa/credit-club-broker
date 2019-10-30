@@ -1,0 +1,48 @@
+@import '~vars', '~mixins';
+
+.wrapper {
+  position: absolute;
+  opacity: 1;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 20px;
+  background: $black;
+  color: #fff;
+  transition-duration: 0.3s;
+  transition-property: opacity;
+}
+
+.content {
+  @include flexBox($alignItems: flex-start, $direction: column);
+  margin: 0 auto;
+  max-width: 1180px;
+  height: 100%;
+}
+
+.top {
+  width: 100%;
+  height: 35px;
+
+  img {
+    height: 100%;
+  }
+}
+
+.body {
+  @include flexBox(center, $alignItems: flex-start);
+  width: 100%;
+  flex: 1;
+}
+
+.bottom {
+  @include flexBox(space-between);
+  width: 100%;
+  font-size: 14px;
+  color: $dark-grey;
+}
+
+.success {
+  opacity: 0;
+}

@@ -1,0 +1,42 @@
+@import '~vars';
+
+@font-face {
+  src: local('Ubuntu-Regular'), url(fonts/Ubuntu-Regular.ttf) format('truetype');
+  font-family: 'Ubuntu';
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  src: local('Ubuntu-Bold'), url(fonts/Ubuntu-Bold.ttf) format('truetype');
+  font-family: 'Ubuntu';
+  font-weight: bold;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif !important;
+  color: $black;
+}
+
+h1 {
+  margin: 0;
+
+  @media (max-width: 450px) {
+    margin-bottom: 10px;
+  }
+}
+
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.empty-list {
+  opacity: 0.4;
+  margin-top: 50px;
+  text-align: center;
+}

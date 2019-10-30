@@ -1,0 +1,95 @@
+@import '~vars', '~mixins';
+
+.wrapper {
+  @include flexBox(flex-start, flex-start, column);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 15px;
+  padding: 15px;
+  width: 250px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.09);
+
+  &:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 5px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.head {
+  @include flexBox();
+  margin-bottom: 7.5px;
+
+  span {
+    flex: 1;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  i {
+    position: absolute;
+    right: 16px;
+    font-size: 20px;
+    color: $dark-grey;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.handler {
+  display: flex;
+  margin-top: 16px;
+  padding: 8px;
+  color: $blue;
+  border: 1px solid $blue;
+  border-radius: $border;
+  transition: $baseTransition;
+
+  &:hover {
+    background: $blue;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+// types
+.error {
+  .head span {
+    color: $red;
+  }
+
+  &:before {
+    background: $red;
+  }
+}
+
+.message {
+  .head span {
+    color: $blue;
+  }
+
+  &:before {
+    background: $blue;
+  }
+}
+
+.warn {
+  .head span {
+    color: #e4d276;
+  }
+
+  &:before {
+    background: #e4d276;
+  }
+}

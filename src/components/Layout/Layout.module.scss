@@ -1,0 +1,26 @@
+@import '~vars';
+
+.main {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 0 20px 20px;
+  min-width: 190px;
+  transition-duration: 0.3s;
+  transition-property: opacity;
+}
+
+.content {
+  margin: 50px auto 0;
+  max-width: 1180px;
+
+  @media (max-width: $mobileSize) {
+    margin: 55px auto 0;
+  }
+}
+
+.show {
+  opacity: 1;
+}

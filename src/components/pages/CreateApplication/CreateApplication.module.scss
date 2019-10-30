@@ -1,0 +1,10 @@
+@import "~vars";
+
+.wrapper {
+  display: flex;
+  margin-top: 30px;
+
+  @media (max-width: $mobileSize) {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,129 @@
+@import '~vars', '~mixins';
+
+.wrapper {
+  padding: 24px;
+  width: 65%;
+  border: 2px solid $grey;
+  border-radius: $border;
+
+  @media (max-width: $mobileSize) {
+    width: 100%;
+  }
+}
+
+.name-complete {
+  margin-bottom: $baseIdent;
+}
+
+.contacts {
+  @include flexBox();
+  margin-bottom: $baseIdent;
+
+  &-input {
+    width: 50%;
+
+    &:nth-child(1) {
+      margin-right: 12px;
+    }
+
+    &:nth-child(2) {
+      margin-left: 12px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    flex-wrap: wrap;
+
+    &-input {
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: $baseIdent;
+      }
+    }
+  }
+}
+
+.comment {
+  margin-bottom: $baseIdent;
+}
+
+.attach {
+  position: relative;
+}
+
+.dropzone {
+  @include flexBox(center);
+
+  min-height: 90px;
+  font-size: 14px;
+  color: #a3a3a3;
+  border: 2px dashed $grey;
+  border-radius: 4px;
+  transition: $fadeTransition;
+
+  p {
+    opacity: 0.8;
+    transition: 0.2s cubic-bezier(0.16, 1.01, 0.2, 1.03);
+  }
+
+  &:hover {
+    border-color: $blue;
+    cursor: pointer;
+
+    p { opacity: 0; }
+
+    i {
+      opacity: 1;
+      margin-top: 0;
+    }
+  }
+
+  &-title {
+    margin-bottom: 10px;
+  }
+
+  &-overlay {
+    @include flexBox();
+    position: absolute;
+    overflow: hidden;
+    height: 75%;
+
+    i {
+      opacity: 0;
+      margin-top: 200%;
+      font-size: 45px;
+      color: $blue;
+      transition: 0.4s cubic-bezier(0.16, 1.01, 0.2, 1.03);
+    }
+  }
+
+  &-active {
+    border-color: $blue;
+
+    .overlay i {
+      opacity: 1;
+      margin-top: 0;
+    }
+
+    p {
+      opacity: 0;
+    }
+  }
+
+  &-disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}
+
+.controls {
+  @include flexBox();
+  margin-top: 24px;
+}
+
+.info {
+  flex: 1;
+}

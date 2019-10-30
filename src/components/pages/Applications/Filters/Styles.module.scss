@@ -1,0 +1,41 @@
+@import '~vars';
+
+.wrapper {
+  display: flex;
+  margin-right: $baseIdent;
+
+  @media (max-width: $mobileWidth) {
+    margin-bottom: $baseIdent;
+    margin-right: 0 !important;
+  }
+
+  @media (max-width: $mobileSmallWidth) {
+    flex-wrap: wrap;
+  }
+}
+
+.picker {
+  margin-right: $baseIdent;
+
+  @media (max-width: 575px) {
+    width: 175px;
+  }
+
+  @media (max-width: $mobileWidth) {
+    width: 50%;
+  }
+
+  @media (max-width: $mobileSmallWidth) {
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+.select {
+  width: 110px;
+
+  @media (max-width: $mobileSmallWidth) {
+    margin-top: $baseIdent;
+    width: 100%;
+  }
+}

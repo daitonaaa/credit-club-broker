@@ -1,0 +1,46 @@
+@import '~vars';
+
+.wrapper {
+  position: relative;
+}
+
+.item {
+  box-sizing: border-box;
+  padding: 16px;
+  width: 70%;
+  background: $light-grey;
+  border-radius: $border;
+
+  &:last-child {
+    margin-top: 16px;
+    width: 55%;
+  }
+
+  @media (max-width: $mobileSize) {
+    width: 100%;
+
+    &:last-child {
+      width: 85%;
+    }
+  }
+}
+
+.flicker {
+  min-width: initial;
+
+  &:not(:last-child) {
+    margin-bottom: 7.5px;
+  }
+
+  &:nth-child(1) {
+    width: 85%;
+  }
+
+  &:nth-child(2) {
+    width: 55%;
+  }
+
+  &:nth-child(3) {
+    width: 45%;
+  }
+}

@@ -1,0 +1,26 @@
+@import '~vars', '~mixins';
+
+.wrapper {
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: 100%;
+  color: $black;
+
+  @include flexBox(center, $direction: column);
+}
+
+.sorry {
+  padding-bottom: $baseIdent;
+  font-size: 90px;
+  color: $dark-grey;
+}
+
+.text {
+  line-height: 1.4;
+  text-align: center;
+}
+
+.button {
+  margin-top: $baseIdent;
+}

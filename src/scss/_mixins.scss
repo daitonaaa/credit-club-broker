@@ -1,0 +1,35 @@
+@mixin animate($name, $duration, $iteration, $direction, $timing) {
+  animation-duration: $duration;
+  animation-iteration-count: $iteration;
+  animation-name: $name;
+  animation-direction: $direction;
+  animation-timing-function: $timing;
+}
+
+@mixin flexBox($justifyContent:flex-start, $alignItems:center, $direction:initial, $display:flex) {
+  display: $display;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+  flex-direction: $direction;
+}
+
+@mixin text-vertical-hidden($height: 20%) {
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: $height;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, #fff 100%);
+  }
+}
+
+@mixin text-ellipsis() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
